@@ -5,7 +5,7 @@ all: run
 run: ./build/Main
 	./build/Main day01 ./inputs/day01
 
-./build/Main: ./Main.agda ./Day01.agda
+./build/Main: ./Main.agda ./Lib.agda ./Day01.agda
 	agda --compile-dir=./build --compile ./Main.agda
 
 clean:
