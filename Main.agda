@@ -9,6 +9,7 @@ open import Data.Maybe using (Maybe; just; nothing)
 open import Data.Unit.Base using (⊤)
 
 open import Day01 using (day01)
+open import Day02 using (day02)
 open import Lib using (expect)
 
 usage : String -> String
@@ -16,6 +17,7 @@ usage error = error ++ "\nUsage: day<XX> <input-file>"
 
 solveDay : String -> String -> IO ⊤
 solveDay "day01" = day01
+solveDay "day02" = Day02.io.day02
 solveDay _ _ = expect (usage "There is no such day") nothing
 
 main : Main

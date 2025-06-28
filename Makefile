@@ -3,9 +3,9 @@
 all: run
 
 run: ./build/Main
-	./build/Main day01 ./inputs/day01
+	./build/Main day02 ./inputs/day02
 
-./build/Main: ./Main.agda ./Lib.agda ./Day01.agda
+./build/Main: ./Main.agda ./Lib.agda ./Day01.agda ./Day02.agda
 	agda --compile-dir=./build --compile ./Main.agda
 
 clean:
